@@ -76,7 +76,7 @@ export class Service {
       return await this.databases.listDocuments(
         conf.appWriteDatabaseID,
         conf.appWriteCollectionId,
-        queries // could have written this way also  [Query.equal("status", "active")]
+        queries // could have been written in this way also  [Query.equal("status", "active")]
       );
     } catch (error) {
       console.log("Appwrite service :: getPOsts:: error", error);
@@ -88,7 +88,7 @@ export class Service {
 
   async uploadFile(file) {
     try {
-      // here return will ID that can be used to delete that file if needed in future
+      // here return will be an ID that can be used to delete that file if needed in future
       return await this.bucket.createFile(
         conf.appWriteBucketId,
         ID.unique,
