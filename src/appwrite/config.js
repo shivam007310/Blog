@@ -110,6 +110,6 @@ export class Service {
   }
 
   getFilePreview(fileId) {
-    return this.bucket.getFilePreview(conf.appWriteBucketId, fileId);
+    return this.bucket.getFilePreview(conf.appWriteBucketId, fileId); //returns a url...can directly use inside a image tag
   }
 }
