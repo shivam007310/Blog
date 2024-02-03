@@ -3,7 +3,7 @@ import "./App.css";
 
 import { useDispatch } from "react-redux";
 import conf from "./conf/conf";
-import { Header, Footer } from "./components/";
+import { Header, Footer } from "./components";
 import authservice from "./appwrite/auth";
 import { login, logout } from "./store/authSlice";
 import { Outlet } from "react-router-dom";
@@ -13,7 +13,7 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     // console.log(conf.appWriteUrl);
-    console.log(JSON.stringify(import.meta.env.VITE_AS));
+    // console.log(import.meta.env.VITE_AS);
     authservice
       .getCurrentUser()
       .then((userData) => {
