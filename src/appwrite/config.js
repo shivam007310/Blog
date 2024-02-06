@@ -44,6 +44,8 @@ export class Service {
     }
   }
 
+  // Slug is the Id of the post
+
   async deletePost(slug) {
     try {
       await this.databases.deleteDocument(
@@ -113,3 +115,6 @@ export class Service {
     return this.bucket.getFilePreview(conf.appWriteBucketId, fileId); //returns a url...can directly use inside a image tag
   }
 }
+
+const service = new Service();
+export default service;
